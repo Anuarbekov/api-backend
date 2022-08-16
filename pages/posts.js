@@ -17,8 +17,8 @@ export default function Posts() {
   for (let i = 1; i <= 10; i++) {
     pageNumbers.push(i);
   }
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
   return (
