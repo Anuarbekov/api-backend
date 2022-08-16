@@ -3,7 +3,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Link from "next/link";
-import { PageNotFoundError } from "next/dist/shared/lib/utils";
 export default function Posts() {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);

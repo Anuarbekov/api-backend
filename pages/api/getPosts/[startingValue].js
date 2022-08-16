@@ -5,6 +5,6 @@ export default function getPosts(request, res) {
     .get(
       `https://jsonplaceholder.typicode.com/posts?_start=${startingValue}&_limit=10`
     )
-    .then((response) => res.status(200).json(response.data))
+    .then((answer) => res.status(200).json(answer.data))
     .catch((err) => res.status(500).json(err));
 }
