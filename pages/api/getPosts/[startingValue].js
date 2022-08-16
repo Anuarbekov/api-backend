@@ -1,6 +1,6 @@
 import axios from "axios";
-export default function getPosts(req, res) {
-  const { startingValue } = req.query;
+export default function getPosts(request, res) {
+  const { startingValue } = request.query;
   axios
     .get(
       `https://jsonplaceholder.typicode.com/posts?_start=${startingValue}&_limit=10`
