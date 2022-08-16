@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Link from "next/link";
+import { PageNotFoundError } from "next/dist/shared/lib/utils";
 export default function Posts() {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,14 +35,12 @@ export default function Posts() {
           <Card id={post.id} title={post.title} body={post.body} />
         ))}
       <div className="page-numbers">
-        {pageNumbers.map((pageNumber) => (
+        {pageNumbers.map((page) => (
           <span
-            onClick={() => handlePageChange(pageNumber)}
-            className={`page-number ${
-              pageNumber === currentPage ? "current" : ""
-            }`}
+            onClick={() => handlePageChange(page)}
+            className={`page-number ${page === currentPage ? "current" : ""}`}
           >
-            {pageNumber}
+            {page}
           </span>
         ))}
       </div>
