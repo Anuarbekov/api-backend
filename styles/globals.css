@@ -27,11 +27,11 @@ body {
   text-decoration: none;
   color: grey;
   font-size: 25px;
-  padding-right: 5px;
+  padding-right: 10px;
   cursor: pointer;
 }
 .page-number.current {
-  color: green;
+  color: red;
 }
 .view-post {
   font-size: 50px;
@@ -44,6 +44,27 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+}
+
+.back {
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 10px;
+  text-align: center;
+  background: linear-gradient(to left, #fff 20%, red 40%, red 60%, #fff 80%);
+  background-size: 200% auto;
+  color: red;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 1s linear infinite;
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 .welcome {
   font-size: 55px;
