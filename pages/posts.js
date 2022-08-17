@@ -41,7 +41,7 @@ export default function Posts() {
         <>
           {posts &&
             posts.map((post) => (
-              <Card id={post.id} title={post.title} body={post.body} />
+              <Card key={post.id} id={post.id} title={post.title} body={post.body} />
             ))}
           <div className="page-numbers">
             {pageNumbers.map((page) => (
@@ -50,6 +50,7 @@ export default function Posts() {
                 className={`page-number ${
                   page === currentPage ? "current" : ""
                 }`}
+                key={page}
               >
                 {page}
               </span>
