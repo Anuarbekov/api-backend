@@ -1,7 +1,4 @@
 import Head from "next/head";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import Card from "../components/Card";
 import Link from "next/link";
 export default function Home() {
   return (
@@ -9,8 +6,9 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
+      <h1 className="welcome">Welcome to practice posts page</h1>
       <Link href="/posts">
-        <a>View posts</a>
+        <a className="view-post">View posts</a>
       </Link>
     </div>
   );
